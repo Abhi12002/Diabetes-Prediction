@@ -11,8 +11,8 @@ This project leverages the Pima Indians Diabetes Dataset and machine learning al
 
 ## Team
 
-- **Ashfi Hasnain 
-- **Abhinav Mishra 
+- **Ashfi Hasnain**
+- **Abhinav Mishra**
 - **Lakehead University**
 
 ---
