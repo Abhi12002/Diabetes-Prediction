@@ -11,12 +11,9 @@ This project leverages the Pima Indians Diabetes Dataset and machine learning al
 
 ## Team
 
-- **Ashfi Hasnain (1163397)**
-- **Abhinav Mishra (1173645)**
+- **Ashfi Hasnain 
+- **Abhinav Mishra 
 - **Lakehead University**
-- **COMP4310: Web Health Informatics**
-- **Instructor: Dr. M. Rathore**
-- **Date: November 26, 2024**
 
 ---
 
