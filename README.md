@@ -25,6 +25,7 @@
 - [🗂️ Project Structure](#project-structure)
 - [📜 License](#license)
 - [🙏 Acknowledgments](#acknowledgments)
+- [🤝 Contributors](#contributors)
 - [📬 Contact](#contact)
 
 ---
@@ -192,6 +193,18 @@ See the [LICENSE](./LICENSE) file for details.
 - Open-source Python community
 
 ---
+<a name="contributors"><a/>
+## 🤝 Contributors
+
+Thanks to the following individuals for their work on this project:
+
+| Name           | GitHub                                       | Role         |
+|----------------|----------------------------------------------|--------------|
+| Abhinav Mishra | [@Abhi12002](https://github.com/Abhi12002)   | Project Lead |
+| Ashfi Hasnain  | [@Ashfi-Hasnain](https://github.com/Ashfi-Hasnain) | Co-Developer |
+
+---
+
 
 <a name="contact"></a>
 ## 📬 Contact
