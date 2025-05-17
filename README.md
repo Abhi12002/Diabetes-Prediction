@@ -1,125 +1,205 @@
+<h1 align="center">🩺 Diabetes Prediction Tool</h1>
 
-# Predicting Diabetes Onset
-
-## Overview
-
-Diabetes is a chronic medical condition affecting millions worldwide. According to the Canadian government, nearly 3.8 million Canadians live with diagnosed diabetes, representing 9.8% of the population. The goal of this project is to create a predictive software tool that can help individuals assess their risk of diabetes early, enabling timely consultation with healthcare professionals.
-
-This project leverages the Pima Indians Diabetes Dataset and machine learning algorithms to create an easy-to-use interface that can predict the likelihood of diabetes onset based on key health indicators.
-
----
-
-## Team
-
-- **Ashfi Hasnain**
-- **Abhinav Mishra**
-- **Lakehead University**
+<p align="center">
+  <a href="https://www.python.org/"><img src="https://img.shields.io/badge/Python-3.8%2B-blue.svg"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-yellow.svg"></a>
+  <a href="https://github.com/Abhi12002/Diabetes-Prediction/stargazers"><img src="https://img.shields.io/github/stars/Abhi12002/Diabetes-Prediction?style=social"></a>
+</p>
 
 ---
 
-## Development Stack
+<a name="table-of-contents"></a>
+## 📑 Table of Contents
 
-- **Programming Language**: Python
-- **Platform**: Google Colab
-- **ML Libraries**: Scikit-learn, Pandas, Matplotlib, Seaborn
-- **Interface**: Graphical User Interface (via Colab Widgets)
-
----
-
-## Dataset
-
-- **Source**: Pima Indians Diabetes Dataset (National Institute of Diabetes and Digestive and Kidney Diseases)
-- **Attributes**:
-  1. Pregnancies
-  2. Glucose
-  3. Blood Pressure
-  4. Skin Thickness
-  5. Insulin
-  6. Body Mass Index (BMI)
-  7. Diabetes Pedigree Function
-  8. Age
-- **Size**: 768 records
-- **Target**: Binary outcome (Diabetic or Non-Diabetic)
+- [📝 Project Overview](#project-overview)
+- [🖼️ Demo](#demo)
+- [🚀 Features](#features)
+- [🛠️ Technologies Used](#technologies-used)
+- [📊 Dataset](#dataset)
+- [🔍 Data Preprocessing](#data-preprocessing)
+- [🧠 Model Training & Evaluation](#model-training-and-evaluation)
+- [💻 User Interface (GUI)](#user-interface-gui)
+- [🧪 Testing & Results](#testing-and-results)
+- [🚧 Challenges](#challenges)
+- [🛣️ Future Improvements](#future-improvements)
+- [🗂️ Project Structure](#project-structure)
+- [📜 License](#license)
+- [🙏 Acknowledgments](#acknowledgments)
+- [📬 Contact](#contact)
 
 ---
 
-## Data Preprocessing
+<a name="project-overview"></a>
+## 📝 Project Overview
 
-- Missing data replaced with column-wise averages.
-- No duplicate entries found.
-- Outlier detection performed using box plots.
-- Data distribution analyzed using histograms.
-- Correlation matrix generated using Pearson’s coefficient.
+**Diabetes Prediction Tool** is a machine learning-based application that predicts the likelihood of diabetes in an individual based on 8 key medical attributes.  
+Built using the **Pima Indians Diabetes Dataset**, the tool is designed for early risk assessment and educational purposes.
 
 ---
 
-## Machine Learning Model
+<a name="demo"></a>
+## 🖼️ Demo
 
-### Preparation
+| Diabetes Prediction GUI |
+|:------------------------:|
+| ![Diabetes GUI](./Diabetes.png) |
 
-- Features (`X`) and target (`Y`) separated.
-- Train-test split (80/20) with `random_state=42`.
-- Standardization performed using `StandardScaler`.
+---
 
-### Models Tested
+<a name="features"></a>
+## 🚀 Features
+
+- Real-time diabetes risk prediction
+- Input-based prediction through a GUI in Colab
+- Multiple ML models tested; best model deployed
+- No installation required (runs in Google Colab)
+
+---
+
+<a name="technologies-used"></a>
+## 🛠️ Technologies Used
+
+- **Python 3.8+**
+- **Google Colab**
+- **Libraries**:
+  - Scikit-learn
+  - Pandas
+  - NumPy
+  - Matplotlib
+  - Seaborn
+  - Joblib
+  - Colab Widgets
+
+---
+
+<a name="dataset"></a>
+## 📊 Dataset
+
+- **Source**: [Pima Indians Diabetes Dataset – Kaggle](https://www.kaggle.com/datasets/uciml/pima-indians-diabetes-database)
+- **Records**: 768
+- **Features**:
+  - Pregnancies
+  - Glucose
+  - Blood Pressure
+  - Skin Thickness
+  - Insulin
+  - BMI
+  - Diabetes Pedigree Function
+  - Age
+- **Target**: Binary — Diabetic (1) or Not Diabetic (0)
+
+---
+<a name="data-preprocessing"></a>
+## 🔍 Data Preprocessing
+
+- Missing values handled with column mean imputation
+- Verified no duplicate entries
+- Outliers visualized with box plots
+- Data distribution analyzed using histograms
+- Correlation matrix generated (Pearson)
+
+---
+
+<a name="model-training-and-evaluation"></a>
+## 🧠 Model Training & Evaluation
+
+### ML Algorithms Used
 
 - Logistic Regression
 - K-Nearest Neighbors
-- Support Vector Machines
+- Support Vector Machine
 - Decision Tree
-- Random Forest
+- Random Forest ✅ *(Best performing)*
 - Gradient Boosting
 
-### Evaluation
+### Process
 
-- Accuracy measured for each model.
-- **Random Forest** achieved highest predictive accuracy.
-- Final model serialized using `joblib`.
-
----
-
-## GUI (Graphical User Interface)
-
-- Built using Colab interface elements.
-- Users input values for 8 health features.
-- On clicking "Predict", system displays risk status.
-- Example Input: `[0, 85, 82, 18.7, 91, 19.4, 0.9, 20]` → Prediction: **Not Diabetic**
+- 80/20 Train-Test Split (`random_state=42`)
+- Features standardized using `StandardScaler`
+- Accuracy and classification reports generated
+- Final model saved using `joblib`
 
 ---
 
-## Challenges Encountered
+<a name="user-interface-gui"></a>
+## 💻 User Interface (GUI)
 
-- File sharing issues in Google Colab between users.
-- GUI limitations in Colab – cannot open in separate window.
-- Dataset limited to Pima Indian population.
-
----
-
-## Future Improvements
-
-1. Use a more ethnically diverse dataset.
-2. Develop a standalone desktop/mobile application.
-3. Integrate medical expert validation for clinical relevance.
+- Built using **Colab Widgets**
+- Inputs: 8 medical metrics
+- Output: Predicted risk — Diabetic or Not
+- Example input:  
+  `[0, 85, 82, 18.7, 91, 19.4, 0.9, 20]` → Output: **Not Diabetic**
 
 ---
 
-## Conclusion
+<a name="testing-and-results"></a>
+## 🧪 Testing & Results
 
-This project integrates data analysis, machine learning, and a simple user interface to offer a predictive tool for assessing diabetes risk. It showcases the power of Python for health informatics applications and encourages further development to improve public health outcomes.
+- All models validated on hold-out test set
+- Random Forest achieved highest accuracy
+- Manual tests for edge values verified behavior
 
 ---
 
-## Citations
+<a name="challenges"></a>
+## 🚧 Challenges
 
-Sources include:
+- Limited GUI flexibility in Colab
+- Collaboration friction due to Colab file sharing
+- Dataset restricted to one ethnic group (Pima Indians)
+
+---
+
+<a name="future-improvements"></a>
+## 🛣️ Future Improvements
+
+- Use a multi-ethnic and larger dataset
+- Build a deployable standalone app (desktop/mobile)
+- Add explainability tools like SHAP or LIME
+- Validate predictions with medical professionals
+
+---
+
+<a name="project-structure"></a>
+## 🗂️ Project Structure
+
+<pre>
+Diabetes-Prediction/
+├── Diabetes Prediction.ipynb     # Main notebook
+├── Diabetes.png                  # GUI screenshot
+├── model.pkl                     # Serialized Random Forest model
+├── LICENSE
+└── README.md
+</pre>
+
+---
+
+<a name="license"></a
+## 📜 License
+
+This project is licensed under the **MIT License**.  
+See the [LICENSE](./LICENSE) file for details.
+
+---
+
+<a name="acknowledgments"></a>
+## 🙏 Acknowledgments
+
+- National Institute of Diabetes and Digestive and Kidney Diseases (NIDDK)
+- Kaggle Datasets
 - Canadian Diabetes Association
-- Cleveland Clinic
-- Mayo Clinic
 - Public Health Agency of Canada
-- NIH, WHO, Kaggle, SimpliLearn
-
-For full references, see the original project documentation.
+- Open-source Python community
 
 ---
 
-*This README provides a comprehensive overview of the Predicting Diabetes Onset project, including motivation, technical implementation, evaluation, and potential for real-world use.*
+<a name="contact"></a>
+## 📬 Contact
+
+**Abhinav Mishra**  
+[LinkedIn](https://www.linkedin.com/in/abhinav-mishra-4b72b120b/)  
+[GitHub](https://github.com/Abhi12002)
+
+---
+
+**⭐ Like this project? Star it, fork it, or share it — feedback is always welcome.**
