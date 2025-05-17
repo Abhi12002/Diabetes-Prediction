@@ -174,7 +174,7 @@ Diabetes-Prediction/
 
 ---
 
-<a name="license"></a
+<a name="license"></a>
 ## 📜 License
 
 This project is licensed under the **MIT License**.  
